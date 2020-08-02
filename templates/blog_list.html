@@ -1,0 +1,24 @@
+{% for post in posts  %}
+<div class="blog-entry">
+    <h2><a href={{post.link}}>{{post.title}}</a></h2>
+    <table>
+        <tr>
+            <td>
+                <img src="icon.png" class="blog-image" />
+            </td>
+            <td>
+                <table>
+                    <tr class="blog-desc" height="80px">
+                        <td>{{post.description}}
+                        </td>
+                    </tr>
+                    <tr class="blog-desc">
+                        <td><i>{{post.published}}</i></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+<hr />
+{% endfor %}

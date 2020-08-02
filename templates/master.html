@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+
+<head>
+    <link rel="icon" href="/icon.png" type="image/png" />
+    <link href="/styles.css" rel="stylesheet" type="text/css" />
+    <link href='https://fonts.googleapis.com/css?family=IBM Plex Sans' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=IBM Plex Mono' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="module">
+        <table class="header">
+            <tr>
+                <td><a href="/index.html">Blog</a></td>
+                <td><a href="/misc.html">Miscellaneous</a></td>
+                <td><a href="/about.html">About</a></td>
+            </tr>
+        </table>
+    </div>
+    <div class="module main">
+        {% include main %}
+    </div>
+    <div class="module">
+        <div class="content">
+            <p>Footer</p>
+        </div>
+    </div>
+</body>
+
+</html>
