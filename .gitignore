@@ -1,2 +1,4 @@
 metakuna.com/
 metakuna.code-workspace
+.vscode
+__pycache__
