@@ -2,3 +2,4 @@ metakuna.com/
 metakuna.code-workspace
 .vscode
 __pycache__
+*.DS_Store

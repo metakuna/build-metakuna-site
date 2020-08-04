@@ -10,7 +10,7 @@ import json
 
 logger = logging.getLogger(__name__)
 
-ROOT = 'metakuna-dummy.com/'
+ROOT = 'metakuna.com/'
 TEMPLATES = 'templates/'
 # these templates will just be inserted straight into master
 JUST_WRAP = 'templates/just-wrap/'

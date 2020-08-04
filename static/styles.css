@@ -19,6 +19,10 @@ a {
     font-family: 'IBM Plex Mono', sans-serif;
 }
 
+blockquote {
+    background-color: lightgrey
+}
+
 h2 {
     margin-block-end: 0.5em;
 }
