@@ -32,6 +32,10 @@ a:hover {
     background-color: #2d0070;
 }
 
+a:hover.image-link {
+    background-color: initial;
+}
+
 .header td {
     text-align: center;
     font-size: large;
@@ -74,4 +78,19 @@ a:hover {
 
 .blog-desc {
     font-size: 0.8em;
+}
+
+.footer {
+    padding-top: 5px;
+    font-family: 'IBM Plex Mono', sans-serif;
+}
+
+.footer img {
+    height: 22px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.twitter-follow-button {
+    padding-block-end: 2px;
 }
