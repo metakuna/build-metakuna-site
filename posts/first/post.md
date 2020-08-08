@@ -11,6 +11,6 @@ In real life however the concrete lure of lower upfront costs usually beats the 
 This has some obvious (negative) side effects:
  - All politicians being lawyers is obviously bad.
  - There are way too many "learn-to-code" platforms because building an online platform requires the softer skill of 'coming up with ideas for websites' and the harder skill of 'knowing how to code'. And for some reason by the time people learn how to code they think it is the most important thing in the universe.
- - Plenty of (YA) novels feature a shy, unassuming young protagonist who escapes to a fantasy world. Because the people who end up good at writing were shy and unassuming children who spent their childhoods locked in their room reading instead of being normal.
+ - Plenty of novels feature a shy, unassuming young protagonist who escapes to a fantasy world. Because the people who end up good at writing were shy and unassuming children who spent their childhoods locked in their room reading instead of being normal (some of us didn't even end up good at writing).
 
  The upside of this however is that if you want to do something that requires a difficult skill that a) you don't have and b) will put a lot of people off, you are more likely to end up excelling at that thing than most people who attempt it. You are more likely to do something truly novel because your competition will be more similar to each other than they are to you. So hop off that oil rig and shoot for the stars, baby!
