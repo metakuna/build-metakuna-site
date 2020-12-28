@@ -7,6 +7,8 @@ import logging
 import re
 import shutil
 import json
+import sys
+from datetime import datetime
 
 logger = logging.getLogger(__name__)
 
@@ -40,6 +42,9 @@ def build_post(dir_ext):
     return None
 
 if __name__ == "__main__":
+    if len(sys.argv) > 1:
+        ROOT = "metakuna-dummy.com/"
+
     # copy all static files directly into the dir
     copy_tree(STATIC, ROOT)
     copy_tree(JUST_WRAP, TEMP)
@@ -48,7 +53,8 @@ if __name__ == "__main__":
     for post_dir in os.listdir(POSTS):
         meta = build_post(post_dir)
         if meta:
-            posts_meta.append(build_post(post_dir))
+            posts_meta.append(meta)
+    posts_meta.sort(key=lambda p: datetime.strptime(p['published'], "%Y-%m-%d"), reverse=True)
 
     # build the blog page
     blog_t = loader.get_template("blog_list.html")

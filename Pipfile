@@ -9,6 +9,14 @@ pylint = "*"
 [packages]
 django = "*"
 markdown = "*"
+jupyter = "*"
+numpy = "*"
+pandas = "*"
+ipykernel = "*"
+matplotlib = "*"
+scipy = "*"
+pygments = "*"
+sklearn = "*"
 
 [requires]
 python_version = "3.8"
