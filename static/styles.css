@@ -71,6 +71,15 @@ a:hover.image-link {
     /* font-family: 'IBM Plex Sans', sans-serif; */
 }
 
+li {
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+img {
+    max-width: 100%;
+}
+
 .blog-image {
     height: 100px;
     padding-right: 10px;

@@ -48,6 +48,7 @@ Well that was a fun little analysis, time to regroup. I seem to have decided tha
 ## What (broadly) I think spaced repetition works and doesn't work for
 
 Based on this analysis we can think about some specific things that spaced repetition probably works for (there may also be actual studies about some of these), some of these have been mentioned already:
+
 - Studying for exams, but particularly for things where there is not a natural structure to the content, e.g. it might work better for History, where there are a lot of random dates and things to remember, that it does for maths.
 - "Bootstrapping" certain skills (learning the basics so it's easier to make progress/understand what people are talking about). For example you could have a flashcard for each musical note, or for the 100 most common words in a language. You need to know these things to get a foothold, but the flashcard approach doesn't make sense once you're trying to compose a symphony, or have an actual conversation with someone.
 - Maybe working in a domain where the Theory hasn't been quite worked out yet, so the bag of facts approach is still the best way to go, e.g. our current understanding of dark matter is just a bundle of observations that suggest there is more matter in the universe than we can see. Developing "a deep understanding" of dark matter would require you to know what it is
@@ -55,17 +56,17 @@ Based on this analysis we can think about some specific things that spaced repet
 I don't however think that it works for trying to become genuinely effective in a field, e.g. becoming a productive programmer, or a great musician, or an academic who publishes high quality papers. It may help in some specific areas with all these things but they all require a complex and intuitive model of what you're working with and I don't think spaced repetition will get you there any faster (because these things are in the hard to understand easy to remember category) and it may actually make you worse by getting you bogged down in the details.
 
 ---
-This whole post's been a bit of a dunk on spaced repetition but I'm just trying to push against the some of the stronger claims of it being a life changing innovation because I used to be credulous of these claims. I will still use it to study for exams and stuff. Also the idea of spacing things out *at all* (even if you don't flashcard and track everything) is a very valuable insight that I use every day.
+This whole post's been a bit of a dunk on spaced repetition but I'm just trying to push against the some of the stronger claims of it being a life changing innovation because I used to be credulous of these claims. I will still use it to study for exams and stuff. Also the idea of spacing things out *at all* (even if you don't flashcard and track everything) is a valuable insight that I use every day.
 
 ---
 
 ### Footnotes
- - <sub>(1) Some alternative explanations for _this_ are:</sub>
-    - <sub>learning a lot of stuff is not as widely useful as you might think</sub>
-    - <sub>these people *are* overrepresented but they keep it secret</sub> <br>
-<sub>I don't think either of these are true</sub>
- - <sub>(2) In a broad sense, or as the percentage of flashcards that you remember</sub>
- - <sub>(3) So far I seem to have conflated "flashcard apps" with "spaced repetition" so you could make the valid criticism that spaced repetition refers to a broader category of techniques that are more effective than what I have described. For example if you are learning a language you could give yourself a challenge to "talk to someone about the weather" at increasing intervals until you can do it fluently. This is true and I think that sort of thing could be useful but it is also true that most people who are "into spaced repetition" just use flash card apps.</sub>
+ - <sup>(1) Some alternative explanations for _this_ are:</sup>
+    - <sup>learning a lot of stuff is not as widely useful as you might think</sup>
+    - <sup>these people *are* overrepresented but they keep it secret</sup> <br>
+<sup>I don't think either of these are true</sup>
+ - <sup>(2) In a broad sense, or as the percentage of flashcards that you remember</sup>
+ - <sup>(3) So far I seem to have conflated "flashcard apps" with "spaced repetition" so you could make the valid criticism that spaced repetition refers to a broader category of techniques that are more effective than what I have described. For example if you are learning a language you could give yourself a challenge to "talk to someone about the weather" at increasing intervals until you can do it fluently. This is true and I think that sort of thing could be useful but it is also true that most people who are "into spaced repetition" just use flash card apps.</sup>
 
 
 
