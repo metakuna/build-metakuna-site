@@ -20,6 +20,8 @@ STATIC = 'static/'
 POSTS = 'posts/'
 TEMP = 'temp/'
 
+titles = {}
+
 def build_post(dir_ext):
     # make the static page
     try:
@@ -36,6 +38,7 @@ def build_post(dir_ext):
             metadata = json.load(metadata_file)
             metadata["link"] = f"{dir_name}/post.html"
             metadata["image"] = f"{dir_name}/{metadata['image']}"
+            titles[filename] = metadata["title"]
             return metadata
     except Exception as e:
         logger.error(e)
@@ -62,6 +65,8 @@ if __name__ == "__main__":
     with open(f"{TEMP}index.html", 'w') as f:
         print(blog_t.render(data), file=f)
 
+    print(titles)
+
     # copy all the files over from temp, wrapping html files in the master template
     html_regex = re.compile(".*\.html$")
     t = loader.get_template("master.html")
@@ -76,6 +81,7 @@ if __name__ == "__main__":
             if html_regex.match(f_name):
                 # render it into the master template
                 data = {"main": f_path}
+                data["title"] = titles[TEMP + f_path] if (TEMP + f_path) in titles else "metakuna"
                 with open(out_filename, 'w') as f:
                     print(t.render(data), file=f)
             else:
