@@ -65,8 +65,6 @@ if __name__ == "__main__":
     with open(f"{TEMP}index.html", 'w') as f:
         print(blog_t.render(data), file=f)
 
-    print(titles)
-
     # copy all the files over from temp, wrapping html files in the master template
     html_regex = re.compile(".*\.html$")
     t = loader.get_template("master.html")

@@ -3,3 +3,8 @@ metakuna.code-workspace
 .vscode
 __pycache__
 *.DS_Store
+
+bootstrap/
+notebooks/
+metakuna-dummy.com/
+temp/
