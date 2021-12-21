@@ -1,18 +1,18 @@
-import shutil
-from distutils.dir_util import copy_tree
-from django.template import loader
-import os
-from markdown import markdown
+import json
 import logging
+import os
 import re
 import shutil
-import json
 import sys
 from datetime import datetime
+from distutils.dir_util import copy_tree
+
+from django.template import loader
+from markdown import markdown
 
 logger = logging.getLogger(__name__)
 
-ROOT = 'metakuna.com/'
+ROOT = 'metakuna.me/'
 TEMPLATES = 'templates/'
 # these templates will just be inserted straight into master
 JUST_WRAP = 'templates/just-wrap/'
@@ -46,7 +46,7 @@ def build_post(dir_ext):
 
 if __name__ == "__main__":
     if len(sys.argv) > 1:
-        ROOT = "metakuna-dummy.com/"
+        ROOT = "dummy.metakuna.me/"
 
     # copy all static files directly into the dir
     copy_tree(STATIC, ROOT)

@@ -1,4 +1,4 @@
-# Interpretations of quantum mechanics you probably haven't heard of because I just made them up
+# Interpretations of quantum mechanics you've probably never heard of because I just made them up
 
 ## Quantum mechanics was created by Big Physics to sell more Physics
 
