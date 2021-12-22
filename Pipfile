@@ -17,6 +17,8 @@ matplotlib = "*"
 scipy = "*"
 pygments = "*"
 sklearn = "*"
+black = "*"
+markdown-markup-emoji = "*"
 
 [requires]
 python_version = "3.8"
