@@ -38,7 +38,7 @@ def build_post(dir_ext):
 
         with open(f"{dir_name}/meta.json", "r") as metadata_file:
             metadata = json.load(metadata_file)
-            metadata["link"] = f"{dir_name}/post.html"
+            metadata["link"] = f"{dir_name}/post"
             metadata["image"] = f"{dir_name}/{metadata['image']}"
             titles[filename] = metadata["title"]
             return metadata
