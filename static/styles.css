@@ -1,8 +1,17 @@
+:root {
+    --serif-font-stack: "Source Serif Pro", "Apple Garamond", "Baskerville", "Libre Baskerville", "Droid Serif", "Times New Roman", "Times", serif;
+    --sans-serif-font-stack: "Lucida Sans Unicode", "Source Sans Pro", Helvetica, "Trebuchet MS", sans-serif;
+    --monospaced-font-stack: "IBM Plex Mono", "Liberation Mono", Courier, monospace;
+    --body-text-font-size: 1.2rem;
+    --purple-light: #2d0070;
+    --purple-dark: #1f004d;
+}
+
 body {
-    background-color: #2d0070;
+    background-color: var(--purple-dark);
     color: black;
-    /* font-family: 'IBM Plex Mono', sans-serif; */
-    font-family: 'IBM Plex Sans', sans-serif;
+    font-family: var(--serif-font-stack);
+    font-size: var(--body-text-font-size);
     align-items: center;
 
     display:flex;
@@ -16,7 +25,8 @@ body {
 a {
     text-decoration: inherit;
     color: inherit;
-    font-family: 'IBM Plex Mono', sans-serif;
+    font-family: var(--monospaced-font-stack);
+    /* background-color: rgb(226, 226, 226); */
 }
 
 blockquote {
@@ -29,7 +39,7 @@ h2 {
 
 a:hover {
     color: white;
-    background-color: #2d0070;
+    background-color: var(--purple-light);
 }
 
 a:hover.image-link {
@@ -54,9 +64,8 @@ a:hover.image-link {
 
 .module {
     width: 90%;
-    max-width: 1000px;
+    max-width: 800px;
     align-items: center;
-    /* min-height: 90vh; */
     border: 2px solid white;
     box-shadow: 10px 10px black;
     background-color: whitesmoke;
@@ -64,11 +73,11 @@ a:hover.image-link {
     padding-left: 20px;
     padding-right: 20px;
     box-sizing: border-box;
+    border-radius: 3px;
 }
 
 .main {
     min-height: 80vh;
-    /* font-family: 'IBM Plex Sans', sans-serif; */
 }
 
 li {
@@ -100,7 +109,7 @@ img {
 
 .footer {
     padding-top: 5px;
-    font-family: 'IBM Plex Mono', sans-serif;
+    font-family: var(--monospaced-font-stack);
 }
 
 .footer img {
