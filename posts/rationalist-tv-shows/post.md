@@ -1,3 +1,5 @@
+# Rationalist adjacent reality TV shows
+
 ## The Only Way is Ethics
 The show follows the debaucherous exploits of the ever changing clique of researchers at the Future of Humanity Institute. They are young, free, and single living it up among the dreaming spires of Oxford. There is never a shortage of drama, be it is romance and rivalry with their frenemies at the Center For Applied Rationality, a grad student getting scooped on their trolley problem paper, or a hot new visiting professor in town.
 

@@ -1,3 +1,5 @@
+# The hero's journey
+
 you are 22, you have just graduated i mean dropped out of Stanford University and gotten your first job in Tech. you work for a startup called Digital Velocity that is making a web app for managing b2b SaaS subscriptions. the pay is immorally good and you are allowed to bring your dog to the office. of course you don't have a dog because you don't want to be tied down and you don't go into the office because you have autism. life is good
 
 ...

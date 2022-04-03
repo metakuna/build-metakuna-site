@@ -2,7 +2,10 @@
     --serif-font-stack: "Source Serif Pro", "Apple Garamond", "Baskerville", "Libre Baskerville", "Droid Serif", "Times New Roman", "Times", serif;
     --sans-serif-font-stack: "Lucida Sans Unicode", "Source Sans Pro", Helvetica, "Trebuchet MS", sans-serif;
     --monospaced-font-stack: "IBM Plex Mono", "Liberation Mono", Courier, monospace;
-    --body-text-font-size: 1.2rem;
+    --body-text-font-size: 1.2em;
+    --body-text-font-size-mobile: 2.4em;
+    --h2-text-font-size-mobile: calc(var(--body-text-font-size-mobile) * 1.0);
+    --h3-text-font-size-mobile: calc(var(--body-text-font-size-mobile) * 1.0);
     --purple-light: #2d0070;
     --purple-dark: #1f004d;
 }
@@ -14,19 +17,28 @@ body {
     font-size: var(--body-text-font-size);
     align-items: center;
 
-    display:flex;
-    flex-direction:column;
-    height:100%; 
-    padding:0;
-    margin:0;
-    width:100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%; 
+    padding: 0;
+    margin: 0;
+    width: 100%;
 }
 
 a {
     text-decoration: inherit;
     color: inherit;
     font-family: var(--monospaced-font-stack);
-    /* background-color: rgb(226, 226, 226); */
+}
+
+.main p a {
+    font-family: var(--serif-font-stack);
+    background-color: rgb(232, 232, 232);
+}
+
+/* specifically override background color again */
+.main p a:hover {
+    background-color: var(--purple-light);
 }
 
 blockquote {
@@ -44,12 +56,6 @@ a:hover {
 
 a:hover.image-link {
     background-color: initial;
-}
-
-.header td {
-    text-align: center;
-    font-size: large;
-    padding: 20px;
 }
 
 .header td a {
@@ -100,6 +106,7 @@ img {
 
 .blog-image {
     height: 100px;
+    max-width: fit-content;
     padding-right: 10px;
 }
 
@@ -107,17 +114,91 @@ img {
     font-size: 0.8em;
 }
 
-.footer {
-    padding-top: 5px;
-    font-family: var(--monospaced-font-stack);
+input, select, button {
+    text-align: right;
+    font-family: inherit;
+    font-size: inherit;
 }
 
-.footer img {
-    height: 22px;
-    padding-left: 10px;
-    padding-right: 10px;
+.interactive-box {
+    max-width: 80%;
+    margin: auto;
+    padding: 0.5em 1em 1em 1em;
+    border: 5px solid var(--purple-light);
+    border-radius: 5px;
 }
 
-.twitter-follow-button {
-    padding-block-end: 2px;
+/* For Mobile */
+@media only screen and (max-device-width: 540px) {
+    .header td {
+        text-align: center;
+        font-size: xxx-large;
+        padding: 20px;
+    }
+
+    .module {
+        width: 95%;
+        max-width: 95%;
+    }
+
+    /* .blog-desc {
+        font-size: calc(var(--body-text-font-size-mobile) * 0.5);
+    } */
+
+    .blog-image {
+        height: 150px;
+        max-width: fit-content;
+        padding-right: 10px;
+    }
+
+    body {
+        font-size: var(--body-text-font-size-mobile);
+    }
+
+    /* input, select {
+        font-size: var(--body-text-font-size-mobile);
+    } */
+
+    /* h2 {
+        font-size: var(--h2-text-font-size-mobile);
+    }
+
+    h3 {
+        font-size: var(--h3-text-font-size-mobile);
+    } */
+
+    .footer {
+        padding-top: 5px;
+        font-family: var(--monospaced-font-stack);
+        font-size: xx-large;
+        margin-top: 8px;
+        margin-bottom: 16px;
+    }
+
+    .footer img {
+        height: 1.5em;
+        margin-bottom: -0.2em;
+    }
+}
+
+/* For tablet up to desktop */
+@media only screen and (min-device-width: 540px) {
+    .header td {
+        text-align: center;
+        font-size: large;
+        padding: 20px;
+    }
+
+    .footer {
+        padding-top: 5px;
+        font-family: var(--monospaced-font-stack);
+        font-size: large;
+        margin-top: 6px;
+        margin-bottom: 12px;
+    }
+
+    .footer img {
+        height: 1.2em;
+        margin-bottom: -0.2em;
+    }
 }
