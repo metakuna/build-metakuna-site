@@ -1,0 +1,5 @@
+{
+  "buildCommand": "pip install django markdown && mkdir -p metakuna.me && DJANGO_SETTINGS_MODULE=django-settings.base python build.py",
+  "outputDirectory": "metakuna.me",
+  "installCommand": "echo 'skip'"
+}
