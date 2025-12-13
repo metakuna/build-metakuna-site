@@ -5,10 +5,14 @@ import re
 import shutil
 import sys
 from datetime import datetime
-from distutils.dir_util import copy_tree
 
 from django.template import loader
 from markdown import Markdown
+
+
+def copy_tree(src, dst):
+    """Copy directory tree, replacing distutils.dir_util.copy_tree"""
+    shutil.copytree(src, dst, dirs_exist_ok=True)
 
 logger = logging.getLogger(__name__)
 
@@ -22,7 +26,7 @@ TEMP = "temp/"
 
 titles = {}
 
-md = Markdown(extensions=["markdown_markup_emoji.markup_emoji"])
+md = Markdown()
 
 def build_post(dir_ext):
     # make the static page
@@ -31,15 +35,18 @@ def build_post(dir_ext):
         copy_tree(dir_name, f"{TEMP}{dir_name}")
         with open(f"{dir_name}/post.md", "r") as f:
             html = md.convert(f.read())
-        filename = f"{TEMP}{dir_name}/post.html"
+            md.reset()  # Reset the markdown instance for next conversion
+        # Use index.html for clean URLs
+        filename = f"{TEMP}{dir_name}/index.html"
         os.makedirs(os.path.dirname(filename), exist_ok=True)
         with open(filename, "w") as f:
             print(html, file=f)
 
         with open(f"{dir_name}/meta.json", "r") as metadata_file:
             metadata = json.load(metadata_file)
-            metadata["link"] = f"{dir_name}/post"
-            metadata["image"] = f"{dir_name}/{metadata['image']}"
+            # Link to directory (Vercel serves index.html automatically)
+            metadata["link"] = f"/{dir_name}/"
+            metadata["image"] = f"/{dir_name}/{metadata['image']}"
             titles[filename] = metadata["title"]
             return metadata
     except Exception as e:
@@ -85,7 +92,7 @@ if __name__ == "__main__":
         print(blog_t.render(data), file=f)
 
     # copy all the files over from temp, wrapping html files in the master template
-    html_regex = re.compile(".*\.html$")
+    html_regex = re.compile(r".*\.html$")
     t = loader.get_template("master.html")
     for (path, _, files) in os.walk(TEMP):
         # x is like (full_dir_path, [subdirs (relative)], [files])
@@ -93,9 +100,18 @@ if __name__ == "__main__":
         temp_path = path[l:]  # cut off the start of the path for copying purposes
         for f_name in files:
             f_path = f"{temp_path}{'/' if temp_path else ''}{f_name}"
-            out_filename = f"{ROOT}{f_path}"
-            os.makedirs(os.path.dirname(out_filename), exist_ok=True)
+            
             if html_regex.match(f_name):
+                # For clean URLs: convert xxx.html to xxx/index.html
+                # But keep index.html as is
+                if f_name == "index.html":
+                    out_filename = f"{ROOT}{f_path}"
+                else:
+                    # about.html -> about/index.html
+                    base_name = f_name[:-5]  # remove .html
+                    out_filename = f"{ROOT}{temp_path}{'/' if temp_path else ''}{base_name}/index.html"
+                
+                os.makedirs(os.path.dirname(out_filename), exist_ok=True)
                 # render it into the master template
                 data = {"main": f_path}
                 data["title"] = (
@@ -105,6 +121,8 @@ if __name__ == "__main__":
                     print(t.render(data), file=f)
             else:
                 # just copy the file
+                out_filename = f"{ROOT}{f_path}"
+                os.makedirs(os.path.dirname(out_filename), exist_ok=True)
                 shutil.copyfile(f"{TEMP}{f_path}", out_filename)
 
     shutil.rmtree(TEMP)

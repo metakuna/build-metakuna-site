@@ -4,21 +4,11 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
-pylint = "*"
 
 [packages]
 django = "*"
 markdown = "*"
-jupyter = "*"
-numpy = "*"
-pandas = "*"
-ipykernel = "*"
-matplotlib = "*"
-scipy = "*"
-pygments = "*"
-sklearn = "*"
-black = "*"
 markdown-markup-emoji = "*"
 
 [requires]
-python_version = "3.8"
+python_version = "3.13"
